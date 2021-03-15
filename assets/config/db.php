@@ -1,9 +1,9 @@
 <?php
  // Defines information for database connection
  define('DB_HOST', 'localhost');
- define('DB_NAME', 'codeanywhere');
+ define('DB_NAME', 'diy_community');
  define('DB_USER', 'root');
- define('DB_PASS', '');
+ define('DB_PASS', 'Password1');
  // Connects to database
  $dbh = new PDO(
  'mysql:host='.DB_HOST.';dbname='.DB_NAME.';charset=utf8',

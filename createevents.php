@@ -65,7 +65,7 @@
       <h2>
         Please fill out this form to publish your DIY or event!
       </h2>
-    <form method="post">
+    <form action="functions/insert.php" method="POST">
      <div class="form-group ">
       <label class="control-label requiredField" for="name">
        Name your project!
@@ -142,7 +142,7 @@
      </div>
      <div class="form-group">
       <div>
-       <button class="btn btn-primary" name="submit" type="submit">
+       <button class="btn btn-primary" name="create" type="submit">
         Create!
        </button>
       </div>

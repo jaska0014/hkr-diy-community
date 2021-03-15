@@ -19,8 +19,12 @@ body {
 
 .carousel-header{
   height: 531px;
-  padding-top: 5px;
-  padding-bottom: 10px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+carousel-item{
+  height: 531px;
 }
 
 header {
@@ -59,9 +63,6 @@ header {
 
 h1{
   font-size:100px;
-}
-p{
- font-family: 'Noto Serif';
 }
 
 .footer-link {
@@ -131,6 +132,23 @@ h4{
     text-decoration: bold;
    position: absolute;
   top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+        background-color: rgba(255, 255, 255, 0.75);
+      background-color: rgba(255, 255, 255, 0.75);
+          background-size: 300px 100px;
+}
+
+.card-time{
+	width: 100%;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	font-size:18px; 
+  text-align: center;
+  	font-family: 'Oswald', sans-serif;
+    text-decoration: bold;
+   position: absolute;
+  top: 67%;
   left: 50%;
   transform: translate(-50%, -50%);
         background-color: rgba(255, 255, 255, 0.75);

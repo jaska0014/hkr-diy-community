@@ -1,18 +1,18 @@
 <?php
  // Checks whether the registration button has been pressed
- if (isset($_POST['register'])) {
+ if (isset($_POST['create'])) {
  // Creates a query
  $sql = '
- INSERT INTO users (firstname, lastname, email, password, regdate)
- VALUES (:firstname, :lastname, :email, :password, NOW())
+ INSERT INTO `diy_events` (`title`, `description`, `date`, `image`) VALUES
+ VALUES (:title, :description, :date, :image)
  ';
  // Prepares a query
  $stmt = $dbh->prepare($sql);
  // Connects form fields with db containers
- $stmt->bindValue(':firstname', $_POST['firstname']);
- $stmt->bindValue(':lastname', $_POST['lastname']);
- $stmt->bindValue(':email', $_POST['email']);
- $stmt->bindValue(':password', $_POST['password']);
+ $stmt->bindValue(':title', $_POST['title']);
+ $stmt->bindValue(':description', $_POST['description']);
+ $stmt->bindValue(':date', $_POST['date']);
+ $stmt->bindValue(':image', $_POST['image']);
  // Sends query to database
  if ($stmt->execute()) {
  header('Location: ../../index.php?action=inserted');
