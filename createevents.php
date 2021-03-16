@@ -2,7 +2,7 @@
  // Opens database connection
  require_once 'assets/config/db.php';
  // Gets information from database
- require_once 'assets/functions/select.php';
+ require_once 'assets/functions/insert.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="assets/css/all.min.css">
   <!-- Custom styles -->
  <link rel="stylesheet" href="assets/css/album.css?<?php echo hash_file('md5',
-'./css/album.css'); ?>">
+'assets/css/album.css'); ?>">
   <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Noto Serif' rel='stylesheet' >
 </head>
@@ -62,10 +62,27 @@
     
     <!-- FORM -->
     <form>
+      <?php
+ // Checks if an action is set
+ if (isset($_GET['action'])) {
+ // Checks which action is set
+ switch ($_GET['action']) {
+ case 'inserted':
+ echo '
+ <div class="alert alert-success">
+ Posten har lagts till i databasen!
+ </div>
+ ';
+ break;
+ }
+ }
+?>
+       <form>
+
       <h2>
         Please fill out this form to publish your DIY or event!
       </h2>
-    <form action="functions/insert.php" method="POST">
+    <form action="assets/functions/insert.php" method="post">
      <div class="form-group ">
       <label class="control-label requiredField" for="name">
        Name your project!
@@ -73,7 +90,7 @@
         *
        </span>
       </label>
-      <input class="form-control" id="name" name="name" placeholder="What do you want to call your project?" type="text"/>
+      <input class="form-control" id="title" name="title" placeholder="What do you want to call your project?" type="text"/>
       <span class="help-block" id="hint_name">
       </span>
      </div>
@@ -84,41 +101,9 @@
         *
        </span>
       </label>
-      <textarea class="form-control" cols="40" id="message" name="message" placeholder="Write a little about what the event or DIY will entail and what the participants will need to follow along. Add a link for the virtual meeting if its an event." rows="5"></textarea>
+      <textarea class="form-control" cols="40" id="description" name="description" placeholder="Write a little about what the event or DIY will entail and what the participants will need to follow along. Add a link for the virtual meeting if its an event." rows="5"></textarea>
       <span class="help-block" id="hint_message">
       </span>
-     </div>
-     <div class="form-group ">
-        <label class="control-label requiredField" for="select">
-       Is this a virtual event or a DIY?
-       <span class="asteriskField">
-        *
-       </span>
-      </label>
-       <select class="select form-control" id="select" name="select">
-       <option value="Event">
-        Event
-       </option>
-       <option value="DIY">
-        DIY
-       </option>
-      </select>
-     </div>
-      <div class="form-group ">
-        <label class="control-label requiredField" for="select">
-       What category will it be?
-       <span class="asteriskField">
-      <select class="select form-control" id="select" name="select">
-       <option value="Knitting">
-        Knitting
-       </option>
-       <option value="Food">
-        Food
-       </option>
-       <option value="Macrame">
-        Macrame
-       </option>
-      </select>
      </div>
      <div class="form-group ">
       <label class="control-label requiredField" for="date">
@@ -129,16 +114,8 @@
       </label>
       <input class="form-control" id="date" name="date" placeholder="MM/DD/YYYY" type="text"/>
      </div>
-     <div class="form-group ">
-      <label class="control-label requiredField" for="number">
-       Time of event
-       <span class="asteriskField">
-        *
-       </span>
-      </label>
-      <input class="form-control" id="number" name="number" placeholder="00:00" type="text"/>
-      <span class="help-block" id="hint_number">
-      </span>
+      <div class="form-group ">
+        <input type="file" id="image" name="image">       
      </div>
      <div class="form-group">
       <div>

@@ -2,9 +2,8 @@
  // Opens database connection
  require_once 'assets/config/db.php';
  // Gets information from database
- require_once 'assets/functions/select.php';
+ require_once 'assets/functions/insert.php';
 ?>
-
 
 <!DOCTYPE html>
 <html lang="sv">
@@ -45,6 +44,7 @@
 				<button type="button" class="btn btn-primary btn-sm mr-3"data-toggle="modal" data-target="#signupModal"type="submit"><i class="far fa-heart mr-1"></i>JOIN US</button>
 				<button type="button" class="btn btn-primary btn-sm mr-3" data-toggle="modal" data-target="#loginModal"type="submit "><i class="fas fa-sign-in-alt mr-1"></i>LOGIN</button>
 				<button type="button" class="btn btn-primary btn-sm mr-3"type="submit"><i class="fas fa-search mr-1"></i>SEARCH</button>
+         <a href="add.php" type="submit" class="btn btn-primary btn-sm mr-3"> <i class="fa fa-plus mr-1"></i>CREATE </a>
       </nav>		
 				</div>	
     
@@ -84,51 +84,27 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-</header> 	
-		
+</header> 
+    
     
     <br>
- 
-    <div class="upcoming-events">
+
+ c
+    <div class="upcoming-events mt-5">
+       <h4>
+  UPCOMING EVENTS
+      </h4>
+      <br>
+<div class="card-deck">
+<div class="card" style="width: 18rem;">
+	<img src="assets/images/decor.jpg"  class="card-img-top" alt="green">
+  <div class="card-body">
+    <p class="card-text">EASY TABLE SETTING TIPS!</p>
+        <p class="card-under">&nbsp;&nbsp;STARTS IN: 3H 2M&nbsp;&nbsp;</p>
+  </div>
+</div>
 			
-					<h4> UPCOMING EVENTS</h4>
-					<br>
-
-					<div class="card-deck">
-						<?php
-							 // Checks whether database is empty
-							 if ($stmt->rowCount() > 0) 
-							 {
-								 // Gets users from database
-								 while ($row = $stmt->fetch()) 
-								 {
-										echo '
-										<div class="card" style="width: 18rem;">
-										<img src="assets/images/'.$row['image'].'" class="card-img-top" alt="green">
-												<div class="card-body">
-													<p class="card-text">'.ucfirst($row['title']).'</p>
-															<p class="card-under">&nbsp;&nbsp;STARTS Ion: '.$row['date'].'</p>
-												</div>
-										</div>';
-								 }
-							 } 
-							else 
-							 {
-								 // Prints out message that database is empty
-								 echo '
-									<div class="card" style="width: 18rem;">
-									<img src="assets/images/noevents.jpg"  class="card-img-top" alt="green">
-											<div class="card-body">
-												<p class="card-text">No events found</p>
-											</div>
-									</div>';
-							 }
-						?>				
-				</div>
-	 </div>
-
-		
-<!-- <div class="card" style="width: 18rem;">
+<div class="card" style="width: 18rem;">
 	<img src="assets/images/tapas.jpg"  class="card-img-top" alt="green">
   <div class="card-body">
     <p class="card-text">SWEDISH TAPAS</p>
@@ -150,10 +126,9 @@
     <p class="card-text">LEATHER TREATMENT</p>
                     <p class="card-under">&nbsp;&nbsp;STARTS IN: 24H 14M&nbsp;&nbsp;</p>
   </div>
-			
 </div>
-			 -->
-
+    </div>
+			</div>
         
     <div class="upcoming-events">
   <h4>
@@ -169,9 +144,6 @@
   </div>
 </div>
 			
-	
-	
-	
 <div class="card" style="width: 18rem;">
 	<img src="assets/images/home.jpg"  class="card-img-top" alt="green">
   <div class="card-body">

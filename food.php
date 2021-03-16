@@ -58,7 +58,9 @@
 		
     
     <div class="upcoming-events">
-<div class="card-deck">
+			<div class="scrolling-wrapper">
+				<div class="card-deck">
+	
 <div class="card" style="width: 18rem;">
 	<img src="assets/images/green.jpg"  class="card-img-top" alt="green">
   <div class="card-body">
@@ -87,6 +89,7 @@
   </div>
 </div>
     </div>
+	</div>
 			</div>
   
   <!-- LOGIN MODAL -->

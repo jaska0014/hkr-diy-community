@@ -13,9 +13,10 @@
  $stmt->bindValue(':description', $_POST['description']);
  $stmt->bindValue(':date', $_POST['date']);
  $stmt->bindValue(':image', $_POST['image']);
+ $stmt->bindValue(':category', $_POST['category']);
  // Sends query to database
  if ($stmt->execute()) {
- header('Location: ../../index.php?action=inserted');
+ header('index.php?action=inserted');
  exit();
  }
  }
