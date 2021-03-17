@@ -1,8 +1,8 @@
 <?php
  // Opens database connection
- require_once 'assets/config/db.php';
+ require_once 'backend/config/db.php';
  // Gets information from database
- require_once 'assets/functions/insert.php';
+ require_once 'backend/functions/insert.php';
 ?>
 
 <!DOCTYPE html>
