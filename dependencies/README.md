@@ -9,7 +9,7 @@ sudo apt-get install php-mysql php-cli
 ```
 mac
 ```bash
-brew install php@8.0
+brew install php@7.3
 ```
 
 
@@ -40,9 +40,17 @@ First enable mysql driver
 You must uncomment ";extension=pdo_mysql.so" and restrt the cli webserver
 ```dotnetcli
 sudo nano /etc/php/7.4/cli/php.ini
+```
 
 We can use the built in [php webserver](https://www.php.net/manual/en/features.commandline.webserver.php) for noe while we are developing
+
 ```bash
 php -S localhost:8085
 ```
 Then navigate to [localhost:8085/index.php](localhost:8085/index.php)
+
+## Open phpMyadmin
+after you start it in docker go to
+```
+localhost:8080
+```
