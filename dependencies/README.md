@@ -14,14 +14,7 @@ brew install php@7.3
 
 
 ### (2) How to setup VSCOde
-See the following article on how to setup - https://code.visualstudio.com/docs/languages/php. You need to tell VSCode where to find php. This will be where you installed php too
-
-See - https://blog.theodo.com/2019/07/vscode-php-development/ 
-
-You must set the following:
-```bash
-
-```
+none
 
 ### (3) How to setup MySQL & phpMyAdmin
 Use the docker compose files provided at /dependencies/docker/docker-compose.yml . This will create a MySql Database and the phpMyAdmin UI for you
@@ -35,12 +28,6 @@ docker-compose down
 ```
 
 ### (4) Run the Code
-First enable mysql driver
-
-You must uncomment ";extension=pdo_mysql.so" and restrt the cli webserver
-```dotnetcli
-sudo nano /etc/php/7.4/cli/php.ini
-```
 
 We can use the built in [php webserver](https://www.php.net/manual/en/features.commandline.webserver.php) for noe while we are developing
 

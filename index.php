@@ -100,7 +100,6 @@
 
   <h4>UPCOMING EVENTS</h4>
   <br>
-  <H2>HELLO<h2>
 
   <div class="card-deck">
     <div class="card card-event" style="width: 18rem;">
