@@ -8,23 +8,31 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
- <meta charset="utf-8">
- <title>DIY COMMUNITY</title>
- <!-- Bootstrap Core CSS -->
- <link rel="stylesheet" href="assets/css/bootstrap.min.css">
- <!-- Font-Awesome Core CSS -->
- <link rel="stylesheet" href="assets/css/all.min.css">
- <!-- Custom styles -->
- <link rel="stylesheet" href="assets/css/album.css?<?php echo hash_file('md5', 
-'./assets/css/album.css'); ?>">
+  <meta charset="utf-8">
+  <title>DIY COMMUNITY</title>
+
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/custom.css">
   <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Noto Serif' rel='stylesheet' >
+
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery-ui.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    
+			$(document).ready(function() {
+				
+        $("div.card-body a.delete").click(function() {
+          alert("You clicked delete");
+        });
+				
+			});
+      
+	</script>
 </head>
-  <body>
-   
-      <!-- JAVASCRIPT LÄNKAD, SKA LIGGA I BODY INTE I HEAD -->
-    <script src="assets/js/jquery.min.js"></script>
-   <script src="assets/js/bootstrap.min.js"></script>
+<body>
   
     <!-- NAV -->
 	<div class="container">
@@ -85,56 +93,62 @@
   </a>
 </div>
 </header> 
-    
-    
-    <br>
+      
+<br>
 
- c
-    <div class="upcoming-events mt-5">
-       <h4>
-  UPCOMING EVENTS
-      </h4>
-      <br>
-<div class="card-deck">
-<div class="card" style="width: 18rem;">
-	<img src="assets/images/decor.jpg"  class="card-img-top" alt="green">
-  <div class="card-body">
-    <p class="card-text">EASY TABLE SETTING TIPS!</p>
+<div class="upcoming-events mt-5">
+
+  <h4>UPCOMING EVENTS</h4>
+  <br>
+
+  <div class="card-deck">
+    <div class="card card-event" style="width: 18rem;">
+      <img src="assets/images/decor.jpg"  class="card-img-top" alt="green">
+      <div class="card-body">
+        <a href="edit.php" class="update btn btn-sm btn-primary">Update</a>
+        <a class="delete btn btn-sm btn-danger">Delete</a>
+        <p class="card-text">EASY TABLE SETTING TIPS!</p>
         <p class="card-under">&nbsp;&nbsp;STARTS IN: 3H 2M&nbsp;&nbsp;</p>
-  </div>
-</div>
-			
-<div class="card" style="width: 18rem;">
-	<img src="assets/images/tapas.jpg"  class="card-img-top" alt="green">
-  <div class="card-body">
-    <p class="card-text">SWEDISH TAPAS</p>
-            <p class="card-under">&nbsp;&nbsp;STARTS IN: 6H 24M&nbsp;&nbsp;</p>
-  </div>
-</div>
-			
-<div class="card" style="width: 18rem;">
-	<img src="assets/images/food.jpg"  class="card-img-top" alt="green">
-  <div class="card-body">
-    <p class="card-text">VEGGIE POKEBOWL</p>
-                <p class="card-under">&nbsp;&nbsp;STARTS IN: 12H 14M&nbsp;&nbsp;</p>
-  </div>
-</div>
-			
-<div class="card" style="width: 18rem;">
-	<img src="assets/images/leather.jpg"  class="card-img-top" alt="green">
-  <div class="card-body">
-    <p class="card-text">LEATHER TREATMENT</p>
-                    <p class="card-under">&nbsp;&nbsp;STARTS IN: 24H 14M&nbsp;&nbsp;</p>
-  </div>
-</div>
+      </div>
     </div>
-			</div>
+            
+      <div class="card card-event" style="width: 18rem;">
+        <img src="assets/images/tapas.jpg"  class="card-img-top" alt="green">
+        <div class="card-body">
+        <a href="edit.php" class="update btn btn-sm btn-primary">Update</a>
+        <a class="delete btn btn-sm btn-danger">Delete</a>
+          <p class="card-text">SWEDISH TAPAS</p>
+          <p class="card-under">&nbsp;&nbsp;STARTS IN: 6H 24M&nbsp;&nbsp;</p>
+        </div>
+      </div>
+            
+      <div class="card card-event style="width: 18rem;">
+        <img src="assets/images/food.jpg"  class="card-img-top" alt="green">
+        <div class="card-body">
+        <a href="edit.php" class="update btn btn-sm btn-primary">Update</a>
+        <a class="delete btn btn-sm btn-danger">Delete</a>
+          <p class="card-text">VEGGIE POKEBOWL</p>
+          <p class="card-under">&nbsp;&nbsp;STARTS IN: 12H 14M&nbsp;&nbsp;</p>
+        </div>
+      </div>
+            
+      <div class="card card-event" style="width: 18rem;">
+        <img src="assets/images/leather.jpg"  class="card-img-top" alt="green">
+        <div class="card-body">
+        <a href="edit.php" class="update btn btn-sm btn-primary">Update</a>
+        <a class="delete btn btn-sm btn-danger">Delete</a>
+          <p class="card-text">LEATHER TREATMENT</p>
+          <p class="card-under">&nbsp;&nbsp;STARTS IN: 24H 14M&nbsp;&nbsp;</p>
+        </div>
+      </div>
+  </div>
+</div>
         
-    <div class="upcoming-events">
-  <h4>
-  RECENT EVENTS
-      </h4>
-      <br>
+<div class="upcoming-events">
+
+  <h4>RECENT EVENTS</h4>
+  <br>
+
 <div class="card-deck">
 <div class="card" style="width: 18rem;">
 	<img src="assets/images/advanced.jpg"  class="card-img-top" alt="green">
