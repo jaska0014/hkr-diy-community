@@ -25,7 +25,7 @@
 			$(document).ready(function() {
 				
 				$('.datepicker').datepicker({
-					format: 'dd/mm/yyyy',
+					dateFormat:"yy-mm-dd",
           buttonImage: "http://jqueryui.com/resources/demos/datepicker/images/calendar.gif",
 				});
 				
@@ -34,18 +34,18 @@
 </head>
 
 
-<form action="backend/functions/insert.php" method="post">
+<form action="add.php" method="post">
 	
 	<h2>Add a new event</h1>
 	
   <div class="form-group">
     <label for="exampleFormControlInput1">Event Title:</label>
-    <input name="title" class="form-control" id="exampleFormControlInput1" placeholder="name your event" required>
+    <input name="title" name="title" class="form-control" id="exampleFormControlInput1" placeholder="name your event" required>
   </div>
 	
   <div class="form-group">
     <label for="exampleFormControlSelect1">Event Category:</label>
-    <select name="category" class="form-control" id="exampleFormControlSelect1" required>
+    <select id="category" name="category" class="form-control" required>
 			<option>food</option>
       <option>craft</option>
       <option>beauty</option>
@@ -56,12 +56,12 @@
 	
 	<div class="form-group"> 
 		<label for="inputDate">Event Date:</label>
-		<input name="date" id="inputDate" class="datepicker form-control" data-date-format="mm/dd/yyyy" placeholder="add the date of your event" required>
+		<input name="date" id="date" class="datepicker form-control" placeholder="add the date of your event" required>
 	</div>
 	
 	<div class="form-group">
 			<label for="exampleFormControlTextarea1">Event Description:</label>
-			<textarea name="description" class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
+			<textarea id="description" name="description" class="form-control" rows="3" required></textarea>
 	</div>
 		
 	<button class="btn btn-primary" name="create" type="submit">Save</button>
