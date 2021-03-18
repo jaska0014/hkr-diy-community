@@ -20,5 +20,5 @@ xxx
 
 
 ## Examples
-### (1) Hon how to use pho and mySql for CRUD
+### (1) How to use php and mySql for CRUD
 https://www.tutorialrepublic.com/php-tutorial/php-mysql-crud-application.php
