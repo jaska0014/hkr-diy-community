@@ -1,4 +1,5 @@
 /* ------------------------------EFFECTS FOR CARDS ----------------------------------------*/
+
 div.card-event a{
     position:absolute;
     display:none;
@@ -61,10 +62,6 @@ body {
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
-  
-    .card {
-      display: inline-block;
-    }
   }
   
   header {
@@ -97,8 +94,8 @@ body {
   
   .boxed{
     background-color: rgba(255, 255, 255, 0.75);
-      padding-bottom: 20px;
-      padding-top: 20px;
+    padding-bottom: 20px;
+    padding-top: 20px;
   }
   
   h1{
@@ -107,17 +104,17 @@ body {
   
   .footer-link {
       color: #36180B;
-    text-decoration: none;
+      text-decoration: none;
   }
   
   
   form {
     margin-top: 30px;
-     margin-bottom: 30px;
+    margin-bottom: 30px;
     background-color: #F9F9F9;
     color: #36180B;
     text-align: left;
-     padding-top: 40px;
+    padding-top: 40px;
     padding-bottom: 40px;
     padding-left: 60px;
     padding-right: 60px;
@@ -138,21 +135,21 @@ body {
   }
   
   .container-fluid{
-     margin-top: 30px;
-     margin-bottom: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     background-color: #F9F9F9;
     color: #36180B;
-     padding-top: 40px;
+    padding-top: 40px;
     padding-bottom: 40px;
   }
   
   .upcoming-events{
     margin-top: 30px;
-     margin-bottom: 30px;
+    margin-bottom: 30px;
     background-color: #F9F9F9;
     color: #36180B;
     text-align: left;
-     padding-top: 40px;
+    padding-top: 40px;
     padding-bottom: 40px;
     padding-left: 60px;
     padding-right: 60px;
@@ -163,37 +160,37 @@ body {
   }
   
   .card-text{
-      width: 100%;
-      padding-bottom: 10px;
-      padding-top: 10px;
-      font-size:18px; 
+    width: 100%;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-size:18px; 
     text-align: center;
-        font-family: 'Oswald', sans-serif;
-      text-decoration: bold;
-     position: absolute;
+    font-family: 'Oswald', sans-serif;
+    text-decoration: bold;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-          background-color: rgba(255, 255, 255, 0.75);
-        background-color: rgba(255, 255, 255, 0.75);
-            background-size: 300px 100px;
+    background-color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(255, 255, 255, 0.75);
+    background-size: 300px 100px;
   }
   
   .card-time{
-      width: 100%;
-      padding-bottom: 10px;
-      padding-top: 10px;
-      font-size:18px; 
+    width: 100%;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-size:18px; 
     text-align: center;
-        font-family: 'Oswald', sans-serif;
-      text-decoration: bold;
-     position: absolute;
+    font-family: 'Oswald', sans-serif;
+    text-decoration: bold;
+    position: absolute;
     top: 67%;
     left: 50%;
     transform: translate(-50%, -50%);
-          background-color: rgba(255, 255, 255, 0.75);
-        background-color: rgba(255, 255, 255, 0.75);
-            background-size: 300px 100px;
+    background-color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(255, 255, 255, 0.75);
+    background-size: 300px 100px;
   }
   
   .card-under{

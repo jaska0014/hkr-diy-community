@@ -1,11 +1,11 @@
 ?>
 <?php
 
-    $host = '127.0.0.1'; // Must chnage back to localhost
+    $host = '127.0.0.1'; // Must chnage back to localhost use 127.0.0.1 for docker
     $db   = 'diy_community';
     $user = 'root';
     $pass = 'Password1';
-    $port = "3308"; // Must change to 3306
+    $port = "3308"; // Must change to 3306 use 3308 for docker
     $charset = 'utf8';
 
     $options = [

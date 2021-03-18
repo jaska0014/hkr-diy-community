@@ -1,8 +1,6 @@
 <?php
- // Opens database connection
- require_once 'backend/config/db.php';
- // Gets information from database
- require_once 'backend/functions/insert.php';
+  require_once 'backend/config/db.php';
+  require_once 'backend/functions/select.php';
 ?>
 
 <!DOCTYPE html>
@@ -54,9 +52,9 @@
 				<button type="button" class="btn btn-primary btn-sm mr-3"type="submit"><i class="fas fa-search mr-1"></i>SEARCH</button>
          <a href="add.php" type="submit" class="btn btn-primary btn-sm mr-3"> <i class="fa fa-plus mr-1"></i>CREATE </a>
       </nav>		
-				</div>	
+    </div>	
     
- <header class="carousel-header">
+<header class="carousel-header">
 <div id="carousel" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carousel" data-slide-to="0" class="active"></li>
@@ -100,90 +98,79 @@
 
   <h4>UPCOMING EVENTS</h4>
   <br>
-  <H2>HELLO<h2>
 
+  <div class=scrolling-wrapper>
   <div class="card-deck">
-    <div class="card card-event" style="width: 18rem;">
-      <img src="assets/images/decor.jpg"  class="card-img-top" alt="green">
-      <div class="card-body">
-        <a href="edit.php" class="update btn btn-sm btn-primary">Update</a>
-        <a class="delete btn btn-sm btn-danger">Delete</a>
-        <p class="card-text">EASY TABLE SETTING TIPS!</p>
-        <p class="card-under">&nbsp;&nbsp;STARTS IN: 3H 2M&nbsp;&nbsp;</p>
-      </div>
-    </div>
-            
-      <div class="card card-event" style="width: 18rem;">
-        <img src="assets/images/tapas.jpg"  class="card-img-top" alt="green">
-        <div class="card-body">
-        <a href="edit.php" class="update btn btn-sm btn-primary">Update</a>
-        <a class="delete btn btn-sm btn-danger">Delete</a>
-          <p class="card-text">SWEDISH TAPAS</p>
-          <p class="card-under">&nbsp;&nbsp;STARTS IN: 6H 24M&nbsp;&nbsp;</p>
-        </div>
-      </div>
-            
-      <div class="card card-event style="width: 18rem;">
-        <img src="assets/images/food.jpg"  class="card-img-top" alt="green">
-        <div class="card-body">
-        <a href="edit.php" class="update btn btn-sm btn-primary">Update</a>
-        <a class="delete btn btn-sm btn-danger">Delete</a>
-          <p class="card-text">VEGGIE POKEBOWL</p>
-          <p class="card-under">&nbsp;&nbsp;STARTS IN: 12H 14M&nbsp;&nbsp;</p>
-        </div>
-      </div>
-            
-      <div class="card card-event" style="width: 18rem;">
-        <img src="assets/images/leather.jpg"  class="card-img-top" alt="green">
-        <div class="card-body">
-        <a href="edit.php" class="update btn btn-sm btn-primary">Update</a>
-        <a class="delete btn btn-sm btn-danger">Delete</a>
-          <p class="card-text">LEATHER TREATMENT</p>
-          <p class="card-under">&nbsp;&nbsp;STARTS IN: 24H 14M&nbsp;&nbsp;</p>
-        </div>
-      </div>
+  
+
+      <?php
+        if ($stmt_upcoming->rowCount() > 0) 
+        {
+          while ($row = $stmt_upcoming->fetch()) {
+            echo "<div class='card card-event' style='width: 18rem; Height: 18rem;'>";
+            echo "<img src='assets/images/".$row['image']."'class='card-img-top' alt='green'>";
+            echo "<div class='card-body'>";
+            echo "<a href='edit.php' class='update btn btn-sm btn-primary'>Update</a>";
+            echo "<a class='delete btn btn-sm btn-danger'>Delete</a>";
+            echo "<p class='card-text'>".strtoupper(ucfirst($row['title']))."</p>";
+            echo "<p class='card-under'>Starts at ".ucfirst($row['title'])."/p>";
+            echo "</div>";
+            echo "</div>";
+          }
+        } 
+        else {
+            echo "<div class='card card-event' style='width: 18rem;'>";
+            echo "<img src='assets/images/none.jpg'class='card-img-top' alt='green'>";
+            echo "<div class='card-body'>";
+            echo "<p class='card-text'>Nothing found?</p>";
+            echo "</div>";
+            echo "</div>";
+        }
+      ?>
+
   </div>
+  <br>
+  </div>
+
 </div>
-        
+       
 <div class="upcoming-events">
 
   <h4>RECENT EVENTS</h4>
   <br>
 
-<div class="card-deck">
-<div class="card" style="width: 18rem;">
-	<img src="assets/images/advanced.jpg"  class="card-img-top" alt="green">
-  <div class="card-body">
-    <p class="card-text">MAKE YOUR OWN BLANKET! </p>
-                        <p class="card-under">&nbsp;&nbsp;3H 45M AGO&nbsp;&nbsp;</p>
+  <div class=scrolling-wrapper>
+  <div class="card-deck">
+   
+      <?php
+        if ($stmt_past->rowCount() > 0) 
+        {
+          while ($row = $stmt_past->fetch()) {
+            echo "<div class='card card-event'style='width: 18rem; Height: 18rem;'>";
+            echo "<img src='assets/images/".$row['image']."'class='card-img-top' alt='green'>";
+            echo "<div class='card-body'>";
+            echo "<a href='edit.php' class='update btn btn-sm btn-primary'>Update</a>";
+            echo "<a class='delete btn btn-sm btn-danger'>Delete</a>";
+            echo "<p class='card-text'>".strtoupper(ucfirst($row['title']))."</p>";
+            echo "<p class='card-under'>Starts at ".ucfirst($row['title'])."/p>";
+            echo "</div>";
+            echo "</div>";
+          }
+        } 
+        else {
+            echo "<div class='card card-event' style='width: 18rem;'>";
+            echo "<img src='assets/images/none.jpg'class='card-img-top' alt='green'>";
+            echo "<div class='card-body'>";
+            echo "<p class='card-text'>Nothing found?</p>";
+            echo "</div>";
+            echo "</div>";
+        }
+      ?>
   </div>
-</div>
-			
-<div class="card" style="width: 18rem;">
-	<img src="assets/images/home.jpg"  class="card-img-top" alt="green">
-  <div class="card-body">
-    <p class="card-text">HOMEMADE CLOTHINGHANGER</p>
-                            <p class="card-under">&nbsp;&nbsp;6H 5M AGO&nbsp;&nbsp;</p>
+  <br>
   </div>
+
 </div>
-			
-<div class="card" style="width: 18rem;">
-	<img src="assets/images/learning.jpg"  class="card-img-top" alt="green">
-  <div class="card-body">
-    <p class="card-text">TYPOGRAPHY PRACTICE</p>
-                                <p class="card-under">&nbsp;&nbsp;12H 43M AGO&nbsp;&nbsp;</p>
-  </div>
-</div>
-			
-<div class="card" style="width: 18rem;">
-	<img src="assets/images/flower.jpg"  class="card-img-top" alt="green">
-  <div class="card-body">
-    <p class="card-text">MAKING BOUQUETS</p>
-                                    <p class="card-under">&nbsp;&nbsp;16H 50M AGO&nbsp;&nbsp;</p>
-  </div>
-</div>
-    </div>
-			</div>
     
 <!-- LOGIN MODAL -->
     
