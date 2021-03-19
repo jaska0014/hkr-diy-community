@@ -1,6 +1,6 @@
 <?php
 // Checks whether the update button has been pressed 
-if (isset($_POST['modify'])) 
+if (isset($_POST['update'])) 
 {
     // Creates a query 
     $sql = '
@@ -17,7 +17,6 @@ if (isset($_POST['modify']))
     $stmt->bindValue(':title', $_POST['title']);
     $stmt->bindValue(':description', $_POST['description']);
     $stmt->bindValue(':date', $_POST['date']);
-    $stmt->bindValue(':image', 'none.jpg');
     $stmt->bindValue(':cat', $_POST['category']);
     $stmt->bindValue(':id', $_POST['id']);
     // Sends query to database

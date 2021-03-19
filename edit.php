@@ -36,7 +36,7 @@
 </head>
 
 
-<form action="backend/functions/update.php" method="post">
+<form action="edit.php" method="post">
 	
   <h2>Edit an existing event</h1>
   
