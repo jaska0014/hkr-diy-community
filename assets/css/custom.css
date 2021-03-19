@@ -1,5 +1,29 @@
 /* ------------------------------EFFECTS FOR CARDS ----------------------------------------*/
 
+div.my-card-scrollable {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  flex-direction: row;
+  justify-content: start;
+  display: flex;
+}
+
+div.my-card-scrollable .card {
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+div.horizontal-scrollable { 
+  overflow-x: auto; 
+  white-space: nowrap; 
+} 
+
+.horizontal-scrollable > .row > .col-xs-4 { 
+  display: inline-block; 
+  float: none; 
+} 
+
 div.card-event a{
     position:absolute;
     display:none;

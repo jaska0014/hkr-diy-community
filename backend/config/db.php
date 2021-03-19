@@ -1,6 +1,4 @@
-?>
 <?php
-
     $host = '127.0.0.1'; // Must chnage back to localhost use 127.0.0.1 for docker
     $db   = 'diy_community';
     $user = 'root';

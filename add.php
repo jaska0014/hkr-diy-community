@@ -40,7 +40,7 @@
 	
   <div class="form-group">
     <label for="exampleFormControlInput1">Event Title:</label>
-    <input name="title" name="title" class="form-control" id="exampleFormControlInput1" placeholder="name your event" required>
+    <input id="title" name="title" class="form-control" placeholder="name your event" required>
   </div>
 	
   <div class="form-group">
@@ -64,5 +64,6 @@
 			<textarea id="description" name="description" class="form-control" rows="3" required></textarea>
 	</div>
 		
-	<button class="btn btn-primary" name="create" type="submit">Save</button>
+  <button class="btn btn-primary" name="create" type="submit">Save</button>
+  <a href="index.php" class="btn btn-primary" name="cancel" type="button">Cancel</button>
 </form>

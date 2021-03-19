@@ -99,21 +99,19 @@
   <h4>UPCOMING EVENTS</h4>
   <br>
 
-  <div class=scrolling-wrapper>
-  <div class="card-deck">
+  <div class="my-card-scrollable">
   
-
       <?php
         if ($stmt_upcoming->rowCount() > 0) 
         {
           while ($row = $stmt_upcoming->fetch()) {
-            echo "<div class='card card-event' style='width: 18rem; Height: 18rem;'>";
+            echo "<div class='card card-event' style='min-width: 18rem ;width: 18rem; height: 18rem;'>";
             echo "<img src='assets/images/".$row['image']."'class='card-img-top' alt='green'>";
             echo "<div class='card-body'>";
             echo "<a href='edit.php' class='update btn btn-sm btn-primary'>Update</a>";
             echo "<a class='delete btn btn-sm btn-danger'>Delete</a>";
-            echo "<p class='card-text'>".strtoupper(ucfirst($row['title']))."</p>";
-            echo "<p class='card-under'>Starts at ".ucfirst($row['title'])."/p>";
+            echo "<p class='card-text'>".strtoupper($row['title'])."</p>";
+            echo "<p class='card-under'>Starts on ".date_format(date_create($row['date']),"Y/m/d")."</p>";
             echo "</div>";
             echo "</div>";
           }
@@ -127,8 +125,6 @@
             echo "</div>";
         }
       ?>
-
-  </div>
   <br>
   </div>
 
@@ -139,20 +135,19 @@
   <h4>RECENT EVENTS</h4>
   <br>
 
-  <div class=scrolling-wrapper>
-  <div class="card-deck">
+  <div class="my-card-scrollable">
    
       <?php
         if ($stmt_past->rowCount() > 0) 
         {
           while ($row = $stmt_past->fetch()) {
-            echo "<div class='card card-event'style='width: 18rem; Height: 18rem;'>";
+            echo "<div class='card card-event' style='min-width: 18rem ;width: 18rem; height: 18rem;'>";
             echo "<img src='assets/images/".$row['image']."'class='card-img-top' alt='green'>";
             echo "<div class='card-body'>";
             echo "<a href='edit.php' class='update btn btn-sm btn-primary'>Update</a>";
             echo "<a class='delete btn btn-sm btn-danger'>Delete</a>";
-            echo "<p class='card-text'>".strtoupper(ucfirst($row['title']))."</p>";
-            echo "<p class='card-under'>Starts at ".ucfirst($row['title'])."/p>";
+            echo "<p class='card-text'>".strtoupper($row['title'])."</p>";
+            echo "<p class='card-under'>Starts on ".date_format(date_create($row['date']),"Y/m/d")."</p>";
             echo "</div>";
             echo "</div>";
           }
@@ -168,7 +163,6 @@
       ?>
   </div>
   <br>
-  </div>
 
 </div>
     
