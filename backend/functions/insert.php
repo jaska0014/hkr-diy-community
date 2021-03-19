@@ -17,7 +17,7 @@
     
     // Sends query to database
     if ($stmt->execute()) {
-        header('location: index.php');
+        header('Location: ../../index.php?action=inserted');
         exit(); 
     }
  }

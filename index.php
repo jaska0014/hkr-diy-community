@@ -31,7 +31,7 @@
 	</script>
 </head>
 <body>
-  
+
     <!-- NAV -->
 	<div class="container">
       <nav class="navbar fixed-top navbar-light bg-light">
@@ -94,6 +94,25 @@
       
 <br>
 
+<?php
+  // Checks if an action is set 
+  if (isset($_GET['action'])) 
+  {
+    // Checks which action is set 
+    switch ($_GET['action']) 
+    {
+      case 'inserted': echo '
+        <div class="alert alert-success"> Posten har lagts till i databasen!
+        </div> ';
+      break;
+      case 'updated': echo '
+        <div class="alert alert-success"> Posten har uppdaterats i databasen!
+        </div> ';
+      break;
+    } 
+  }
+?>
+
 <div class="upcoming-events mt-5">
 
   <h4>UPCOMING EVENTS</h4>
@@ -108,8 +127,8 @@
             echo "<div class='card card-event' style='min-width: 18rem ;width: 18rem; height: 18rem;'>";
             echo "<img src='assets/images/".$row['image']."'class='card-img-top' alt='green'>";
             echo "<div class='card-body'>";
-            echo "<a href='edit.php' class='update btn btn-sm btn-primary'>Update</a>";
-            echo "<a class='delete btn btn-sm btn-danger'>Delete</a>";
+            echo "<a href='edit.php?id=".$row['id']."' class='update btn btn-sm btn-primary'>Update</a>";
+            echo "<a href='delete.php?id=".$row['id']."' class='delete btn btn-sm btn-danger'>Delete</a>";
             echo "<p class='card-text'>".strtoupper($row['title'])."</p>";
             echo "<p class='card-under'>Starts on ".date_format(date_create($row['date']),"Y/m/d")."</p>";
             echo "</div>";
@@ -144,8 +163,8 @@
             echo "<div class='card card-event' style='min-width: 18rem ;width: 18rem; height: 18rem;'>";
             echo "<img src='assets/images/".$row['image']."'class='card-img-top' alt='green'>";
             echo "<div class='card-body'>";
-            echo "<a href='edit.php' class='update btn btn-sm btn-primary'>Update</a>";
-            echo "<a class='delete btn btn-sm btn-danger'>Delete</a>";
+            echo "<a href='edit.php?id=".$row['id']."' class='update btn btn-sm btn-primary'>Update</a>";
+            echo "<a href='delete.php?id=".$row['id']."' class='delete btn btn-sm btn-danger'>Delete</a>";
             echo "<p class='card-text'>".strtoupper($row['title'])."</p>";
             echo "<p class='card-under'>Starts on ".date_format(date_create($row['date']),"Y/m/d")."</p>";
             echo "</div>";
