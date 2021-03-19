@@ -1,6 +1,7 @@
 <?php
   require_once 'backend/config/db.php';
   require_once 'backend/functions/select.php';
+  require_once 'backend/includes/notifications.index.php'; 
 ?>
 
 <!DOCTYPE html>
@@ -107,6 +108,10 @@
       break;
       case 'updated': echo '
         <div class="alert alert-success"> Posten har uppdaterats i databasen!
+        </div> ';
+      break;
+      case 'deleted': echo '
+        <div class="alert alert-danger"> Posten har raderats från databasen!
         </div> ';
       break;
     } 
