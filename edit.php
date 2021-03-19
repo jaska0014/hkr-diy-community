@@ -71,9 +71,9 @@
 	
 	<div class="form-group">
 			<label for="description">Event Description:</label>
-      <textarea id="description" name="description" class="form-control" rows="3" required
-      value="<?php echo $row['description']; ?>"
-      ></textarea>
+      <textarea id="description" name="description" class="form-control" rows="3" required>
+          <?php echo $row['description']; ?>
+      </textarea>
 	</div>
 		
 	<button class="btn btn-primary" name="update" type="submit">
