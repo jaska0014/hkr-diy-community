@@ -50,21 +50,21 @@
   </div>
 	
   <div class="form-group">
-    <label for="exampleFormControlSelect1">Event Category:</label>
-    <select name="category" class="form-control" id="exampleFormControlSelect1" required
+    <label for="category">Event Category:</label>
+    <select name="category" class="form-control" id="category" required
     value="<?php echo $row['category']; ?>"
     >
-			<option>food</option>
-      <option>craft</option>
-      <option>beauty</option>
-      <option>knitting</option>
-      <option>art</option>
+			<option value="food"<?php if ($row['category'] == 'food') echo ' selected="selected"'; ?>>food</option>
+      <option value="craft"<?php if ($row['category'] == 'craft') echo ' selected="selected"'; ?>>craft</option>
+      <option value="beauty"<?php if ($row['category'] == 'beauty') echo ' selected="selected"'; ?>>beauty</option>
+      <option value="knitting"<?php if ($row['category'] == 'knitting') echo ' selected="selected"'; ?>>knitting</option>
+      <option value="art"<?php if ($row['category'] == 'art') echo ' selected="selected"'; ?>>art</option>
     </select>
   </div>
 	
 	<div class="form-group"> 
-		<label for="inputDate">Event Date:</label>
-    <input name="date" id="inputDate" class="datepicker form-control" data-date-format="mm/dd/yyyy" placeholder="add the date of your event" required
+		<label for="date">Event Date:</label>
+    <input name="date" id="date" class="datepicker form-control" data-date-format="mm/dd/yyyy" placeholder="add the date of your event" required
     value="<?php echo $row['date']; ?>"
     >
 	</div>
@@ -72,7 +72,7 @@
 	<div class="form-group">
 			<label for="description">Event Description:</label>
       <textarea id="description" name="description" class="form-control" rows="3" required>
-          <?php echo $row['description']; ?>
+      <?php echo trim($row['description']); ?>
       </textarea>
 	</div>
 		
