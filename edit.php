@@ -28,7 +28,12 @@
                 format: 'dd/mm/yyyy',
                 buttonImage: "http://jqueryui.com/resources/demos/datepicker/images/calendar.gif",
             });
-            
+
+            $("#customFile").change(function (){
+              var fileName = $(this).val();
+              $('#check_file_changed').val('yes');
+            });
+
         });
 
     </script>
@@ -36,12 +41,14 @@
 </head>
 
 
-<form action="edit.php" method="post">
+<form action="edit.php" method="post" enctype="multipart/form-data">
 	
   <h2>Edit an existing event</h1>
   
   <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
-	
+  <input type="hidden" name="image_existing" value="<?php echo $row['image']; ?>">
+	<input type="hidden" name="check_file_changed" id="check_file_changed" value="no">
+
   <div class="form-group">
     <label for="exampleFormControlInput1">Event Title:</label>
     <input id="title" name="title" class="form-control" placeholder="name your event" required
@@ -75,6 +82,11 @@
       <?php echo trim($row['description']); ?>
       </textarea>
 	</div>
+
+  <div class="form-group">  
+    <label for="customFile">Current Image - <?php echo $row['image']; ?></label>
+    <input type="file" class="form-control" id="customFile" name="image">
+  </div>
 		
 	<button class="btn btn-primary" name="update" type="submit">
     <i class="fas fa-pencil-alt"></i> Update
@@ -82,3 +94,7 @@
 
   <a href="index.php" class="delete btn btn-sm btn-primary">Cancel</a>
 </form>
+
+<?php
+  require_once 'backend/includes/notifications.upload.php'; 
+?>

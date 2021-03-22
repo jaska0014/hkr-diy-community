@@ -34,7 +34,7 @@
 </head>
 
 
-<form action="add.php" method="post">
+<form action="add.php" method="post" enctype="multipart/form-data">
 	
 	<h2>Add a new event</h1>
 	
@@ -60,10 +60,21 @@
 	</div>
 	
 	<div class="form-group">
-			<label for="exampleFormControlTextarea1">Event Description:</label>
+			<label for="description">Event Description:</label>
 			<textarea id="description" name="description" class="form-control" rows="3" required></textarea>
 	</div>
-		
+
+  <div class="form-group">  
+    <label for="customFile">Upload a picture</label>
+    <input type="file" class="form-control" id="customFile" name="image" required>
+  </div>
+
   <button class="btn btn-primary" name="create" type="submit">Save</button>
-  <a href="index.php" class="btn btn-primary" name="cancel" type="button">Cancel</button>
+  <a href="index.php" class="btn btn-primary" name="cancel" type="button">Cancel</a>
 </form>
+
+<br>
+
+<?php
+  require_once 'backend/includes/notifications.upload.php'; 
+?>

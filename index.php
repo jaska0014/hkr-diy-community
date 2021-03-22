@@ -110,7 +110,7 @@
         {
           while ($row = $stmt_upcoming->fetch()) {
             echo "<div class='card card-event' style='min-width: 18rem ;width: 18rem; height: 18rem;'>";
-            echo "<img src='assets/images/".$row['image']."'class='card-img-top' alt='green'>";
+            echo "<img src='".$row['image']."'class='card-img-top' alt='green'>";
             echo "<a href='edit.php?id=".$row['id']."' class='update btn btn-sm btn-primary'>Update</a>";
             echo "<a href='remove.php?id=".$row['id']."' class='delete btn btn-sm btn-danger'>Delete</a>";
             echo "<div class='card-body'>";
@@ -146,7 +146,7 @@
         {
           while ($row = $stmt_past->fetch()) {
             echo "<div class='card card-event' style='min-width: 18rem ;width: 18rem; height: 18rem;'>";
-            echo "<img src='assets/images/".$row['image']."'class='card-img-top' alt='green'>";
+            echo "<img src='".$row['image']."'class='card-img-top' alt='green'>";
             echo "<a href='edit.php?id=".$row['id']."' class='update btn btn-sm btn-primary'>Update</a>";
             echo "<a href='remove.php?id=".$row['id']."' class='delete btn btn-sm btn-danger'>Delete</a>";
             echo "<div class='card-body'>";
