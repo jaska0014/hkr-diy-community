@@ -22,9 +22,6 @@
     
 			$(document).ready(function() {
 				
-        $("div.card-body a.delete").click(function() {
-          alert("You clicked delete");
-        });
 				
 			});
       
