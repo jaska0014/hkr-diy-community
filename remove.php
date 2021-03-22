@@ -39,6 +39,7 @@
 <form action="remove.php" method="post">
 
     <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
+    <input type="hidden" name="image_existing" value="<?php echo $row['image']; ?>">
 
     <div class="form-group">
         <p>Are you sure you want to delete this event?</p>

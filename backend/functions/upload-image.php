@@ -6,11 +6,8 @@ $upload_dir = 'images/';
 $errors = array();
 
 //Check if a file was uploaded 
-// if($_FILES['image']['size'] == 0){ 
-if(  $file_changed == 'no'){
-    // $file_save = 'images/none.jpg';
-}
-else
+if($_FILES['image']['size'] != 0)
+//if($file_changed == 'yes')
  {
     $file_tmp = $_FILES['image']['tmp_name'];
     $file_name = $_FILES['image']['name'];

@@ -23,10 +23,12 @@ if (isset($_POST['update']))
     if ($file_changed == 'no') {
         $image_path_to_save_in_db = $existing_image;
     } else {
-        //unlink($existing_image); //Delete the old image file
+        // if (file_exists($existing_image)) {
+        //     unlink($existing_image); //Delete the old image file
+        // }
         $image_path_to_save_in_db = $file_save;
     }
-   
+
     // Prepares a query
     $stmt = $dbh->prepare($sql);
     // Connects form fields with db containers 
