@@ -1,40 +1,45 @@
 <?php
- // Opens database connection
- require_once 'assets/config/db.php';
- // Gets information from database
- require_once 'assets/functions/select.php';
+  require_once 'backend/config/db.php';
+  require_once 'backend/functions/select-food.php';
 ?>
 
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-	<meta charset="utf-8">
-	<title>DIY Community</title>
-	<!--Bootstrap core css-->
-	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-	<!--Font awesome core css-->
-	<link rel="stylesheet" href="assets/css/all.min.css">
-	<!--Custom styles-->
-	<link rel="stylesheet" href="assets/css/album.css?<?php echo hash_file('md5', './assets/css/album.css'); ?>">
-	<link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Noto Serif' rel='stylesheet' >
+  <meta charset="utf-8">
+  <title>DIY COMMUNITY</title>
+
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/custom.css">
+  <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@1,400;1,700&display=swap" rel="stylesheet">
+ <link rel="icon" type="image/x-icon" href="http://projektarbete-kldnoren.codeanyapp.com/assets/images/logo.png" />
+  
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery-ui.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    
+			$(document).ready(function() {
+				
+				
+			});
+      
+	</script>
 </head>
-  
-   
-<body> 
-  
-   <!-- JAVASCRIPT LÄNKAD, SKA LIGGA I BODY INTE I HEAD -->
-    <script src="assets/js/jquery.min.js"></script>
-   <script src="assets/js/bootstrap.min.js"></script>
-  
-<div class="container">
+<body>
+
+    <!-- NAV -->
+	<div class="container">
       <nav class="navbar fixed-top navbar-light bg-light">
       <div class= nav navbar-left>
 			<a class="navbar-brand ml-5" href="index.php">
           <img src="assets/images/logo.png" height="100" alt="DIY logo">
         </a>
 			<li class="nav-item mt-4">
-        <a class="nav-link" href="DIY.php">DIY's</a>
+        <a class="nav-link" href="#popup1">DIY's</a>
       </li>
       <li class="nav-item mt-4">
         <a class="nav-link" href="events.php">Events</a>
@@ -43,10 +48,10 @@
 				<div class="nav navbar-right mr-5">
 				<button type="button" class="btn btn-primary btn-sm mr-3"data-toggle="modal" data-target="#signupModal"type="submit"><i class="far fa-heart mr-1"></i>JOIN US</button>
 				<button type="button" class="btn btn-primary btn-sm mr-3" data-toggle="modal" data-target="#loginModal"type="submit "><i class="fas fa-sign-in-alt mr-1"></i>LOGIN</button>
-				<button type="button" class="btn btn-primary btn-sm mr-3"type="submit"><i class="fas fa-search mr-1"></i>SEARCH</button>
+				<a href="#popup1" class="btn btn-primary btn-sm mr-3"type="submit"><i class="fas fa-search mr-1"></i>SEARCH</a>
+         <a href="add.php" type="submit" class="btn btn-primary btn-sm mr-3"> <i class="fa fa-plus mr-1"></i>CREATE </a>
       </nav>		
-				</div>	
-
+    </div>	   
     
  <header class= "food">
    <div class="boxed mt-5">
@@ -56,41 +61,75 @@
    </div>
 </header>  
 		
+    <ul class="breadcrumb">
+  <li><a href="index.php">Home</a></li>
+  <li><a href="events.php">Events</a></li>
+  <li>Food</li>
+</ul>
+     <br>
+    <h6>
+      EVENTS BY CATEGORY
+    </h6>
+    <button type="button1" disabled class="btn btn-light mr-3" type="submit "><i class="fas fa-paint-brush"></i> ART </button>
+      <a href="food.php" type="button1" class="btn btn-primary mr-3" type="submit "><i class="fas fa-utensils"></i> FOOD </a>
+    <button type="button1" disabled class="btn btn-light mr-3" type="submit "><i class="fas fa-hand-sparkles"></i> BEAUTY </button>
+    <button type="button1" disabled class="btn btn-light mr-3" type="submit "><i class="fas fa-hammer"></i> CRAFT </button>
+      <button type="button1" disabled class="btn btn-light mr-3" type="submit "><i class="fas fa-mitten"></i> KNITTING </button>
     
-    <div class="upcoming-events">
-			<div class="scrolling-wrapper">
-				<div class="card-deck">
-	
-<div class="card" style="width: 18rem;">
-	<img src="assets/images/green.jpg"  class="card-img-top" alt="green">
-  <div class="card-body">
-    <h5 class="card-text">HOMEMADE PASTA COURSE</h5>
+    
+<?php
+  require_once 'backend/includes/notifications.index.php'; 
+?>
+
+<div class="upcoming-events mt-5">
+
+  <h4>CATEGORY: FOOD</h4>
+  <br>
+
+  <div class="my-card-scrollable">
+  
+      <?php
+        if ($stmt->rowCount() > 0)
+        { 
+          while ($row = $stmt->fetch()) 
+					{
+            echo "<div class='card card-event' style='min-width: 18rem ;width: 18rem; height: 18rem;'>";
+            echo "<img src='".$row['image']."'class='card-img-top' alt='green'>";
+            echo "<a href='edit.php?id=".$row['id']."' class='update btn btn-sm btn-primary'>Update</a>";
+            echo "<a href='remove.php?id=".$row['id']."' class='delete btn btn-sm btn-danger'>Delete</a>";
+            echo "<div class='card-body'>";
+            echo "<p class='card-text'>".strtoupper($row['title'])."</p>";
+            echo "<p class='card-under'>Starts on ".date_format(date_create($row['date']),"Y/m/d")."</p>";
+            echo "</div>";
+            echo "</div>";
+          }
+        } 
+        else {
+            echo "<div class='card card-event' style='width: 18rem;'>";
+            echo "<img src='images/bummer.png'class='card-img-top' alt='green'>";
+            echo "<a href='add.php?id=' type='submit' class='btn btn-primary btn-sm mr-3;> <i class='fa fa-plus mr-1'></i>CREATE </a>";
+            echo "<div class='card-body'>";
+            echo "</div>";
+            echo "</div>";
+        }
+      ?>
+  <br>
   </div>
+
 </div>
-			
-<div class="card" style="width: 18rem;">
-	<img src="assets/images/green.jpg"  class="card-img-top" alt="green">
-  <div class="card-body">
-    <h5 class="card-text">PIZZA NIGHT</h5>
-  </div>
-</div>
-			
-<div class="card" style="width: 18rem;">
-	<img src="assets/images/green.jpg"  class="card-img-top" alt="green">
-  <div class="card-body">
-    <h5 class="card-text">SWEDISH TAPAS</h5>
-  </div>
-</div>
-			
-<div class="card" style="width: 18rem;">
-	<img src="assets/images/green.jpg"  class="card-img-top" alt="green">
-  <div class="card-body">
-    <h5 class="card-text">VEGGIE POKEBOWL</h5>
-  </div>
-</div>
-    </div>
+    
+     <!-- UNDER CONSTRUCTION MODAL -->
+       <div id="popup1" class="overlay">
+	<div class="popup">
+		<h4>THIS WEBSITE IS UNDER CONSTRUCTION</h4>
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+			We are a work in progress and hope to have this function<br>
+      up and running in no time!
+		</div>
 	</div>
-			</div>
+    </div>
+    
   
   <!-- LOGIN MODAL -->
     

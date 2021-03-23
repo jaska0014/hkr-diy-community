@@ -13,7 +13,9 @@
   <link rel="stylesheet" href="assets/css/all.min.css">
   <link rel="stylesheet" href="assets/css/custom.css">
   <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Noto Serif' rel='stylesheet' >
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="http://projektarbete-kldnoren.codeanyapp.com/assets/images/logo.png" />
 
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/jquery-ui.min.js"></script>
@@ -37,7 +39,7 @@
           <img src="assets/images/logo.png" height="100" alt="DIY logo">
         </a>
 			<li class="nav-item mt-4">
-        <a class="nav-link" href="DIY.php">DIY's</a>
+        <a class="nav-link" href="#popup1">DIY's</a>
       </li>
       <li class="nav-item mt-4">
         <a class="nav-link" href="events.php">Events</a>
@@ -46,11 +48,10 @@
 				<div class="nav navbar-right mr-5">
 				<button type="button" class="btn btn-primary btn-sm mr-3"data-toggle="modal" data-target="#signupModal"type="submit"><i class="far fa-heart mr-1"></i>JOIN US</button>
 				<button type="button" class="btn btn-primary btn-sm mr-3" data-toggle="modal" data-target="#loginModal"type="submit "><i class="fas fa-sign-in-alt mr-1"></i>LOGIN</button>
-				<button type="button" class="btn btn-primary btn-sm mr-3"type="submit"><i class="fas fa-search mr-1"></i>SEARCH</button>
+				<a href="#popup1" class="btn btn-primary btn-sm mr-3"type="submit"><i class="fas fa-search mr-1"></i>SEARCH</a>
          <a href="add.php" type="submit" class="btn btn-primary btn-sm mr-3"> <i class="fa fa-plus mr-1"></i>CREATE </a>
       </nav>		
-    </div>	
-    
+    </div>	      
 <header class="carousel-header">
 <div id="carousel" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
@@ -60,22 +61,38 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="assets/images/flower.jpg" alt="First slide">
-       <div class="carousel-text mb-5">
-    <h5 class="card-text">HOMEMADE PASTA COURSE</h5>
-  </div>      
+      <img class="d-block w-100" src="images/header1.jpg" alt="First slide">
+      <div class="carousel-text mb-5">
+    <h5 class="card-text-carousel">WELCOME TO YOUR NEW DIY COMMUNTIY!
+         <p class="description">
+           This is a website dedicated to anyone who wants to learn a new craft with the help of your peers<br>
+           or just pick up a few tips and tricks from your more experienced mentors.<br>
+           Share a skill or learn a new one!
+      </p></h5>
+  </div>   
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="assets/images/knitting.jpg" alt="Second slide">
+      <img class="d-block w-100" src="images/header2.jpg" alt="Second slide">
           <div class="carousel-text mb-5">
-    <h5 class="card-text">HOMEMADE PASTA COURSE</h5>
-  </div> 
+    <h5 class="card-text-carousel">HOW DOES IT WORK?
+         <p class="description">
+          Through our network of creatives that host events ranging from beginners knitting classes <br>
+           to advanced cooking courses,<br>
+           we provide the foundation for you to join in and meet people with similar interests!<br>
+           
+      </p></h5>
+  </div>    
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="assets/images/learning.jpg" alt="Third slide">
+      <img class="d-block w-100" src="images/headercolor.jpg" alt="Third slide">
        <div class="carousel-text mb-5">
-    <h5 class="card-text">HOMEMADE PASTA COURSE</h5>
-  </div>
+<h5 class="card-text-carousel">TOGETHER WE CAN LEARN JUST ABOUT ANYTHING
+     <p class="description">
+       Do you have any hot tips that you are dying to share with your fellow crafters?<br>
+       Sign up now and start creating and joining in on the events.<br>
+       Find your community today! ❤
+  </p></h5>
+</div>   
     </div>
   </div>
   <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
@@ -88,7 +105,7 @@
   </a>
 </div>
 </header> 
-      
+          
 <br>
 
 <?php
@@ -119,9 +136,9 @@
         } 
         else {
             echo "<div class='card card-event' style='width: 18rem;'>";
-            echo "<img src='assets/images/none.jpg'class='card-img-top' alt='green'>";
+            echo "<img src='images/bummer.png'class='card-img-top' alt='green'>";
+            echo "<a href='add.php?id=' type='submit' class='btn btn-primary btn-sm mr-3;> <i class='fa fa-plus mr-1'></i>CREATE </a>";
             echo "<div class='card-body'>";
-            echo "<p class='card-text'>Nothing found?</p>";
             echo "</div>";
             echo "</div>";
         }
@@ -155,9 +172,8 @@
         } 
         else {
             echo "<div class='card card-event' style='width: 18rem;'>";
-            echo "<img src='assets/images/none.jpg'class='card-img-top' alt='green'>";
+            echo "<img src='images/bummerrecent.png'class='card-img-top' alt='green'>";
             echo "<div class='card-body'>";
-            echo "<p class='card-text'>Nothing found?</p>";
             echo "</div>";
             echo "</div>";
         }
@@ -257,6 +273,19 @@
 </div>
      <!-- SIGNUP MODAL -->
     
+    <!-- UNDER CONSTRUCTION MODAL -->
+       <div id="popup1" class="overlay">
+	<div class="popup">
+		<h4>THIS WEBSITE IS UNDER CONSTRUCTION</h4>
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+			We are a work in progress and hope to have this function<br>
+      up and running in no time!
+		</div>
+	</div>
+    </div>
+    
+      
 </body>
   
     
