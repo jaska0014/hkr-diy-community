@@ -72,7 +72,7 @@
   </div>   
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="images/header2.jpg" alt="Second slide">
+      <img class="d-block w-100" src="assets/images/header2.jpg" alt="Second slide">
           <div class="carousel-text mb-5">
     <h5 class="card-text-carousel">HOW DOES IT WORK?
          <p class="description">
@@ -84,7 +84,7 @@
   </div>    
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="images/headercolor.jpg" alt="Third slide">
+      <img class="d-block w-100" src="assets/images/headercolor.jpg" alt="Third slide">
        <div class="carousel-text mb-5">
 <h5 class="card-text-carousel">TOGETHER WE CAN LEARN JUST ABOUT ANYTHING
      <p class="description">
