@@ -223,22 +223,20 @@
     
     
 </body>
-       <!-- Footer -->
+   <!-- Footer -->
 <footer class="page-footer font-small mdb-color pt-4">
-  
+
   <!-- Footer Links -->
   <div class="container text-center text-md-left">
- 
+
     <!-- Footer links -->
     <div class="row text-center text-md-left mt-3 pb-3">
        <!-- Grid column -->
-      
+
       <!-- Grid column -->
       <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
         <h6 class="text-uppercase mb-4 font-weight-bold">DIY COMMUNITY</h6>
-        <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
-          consectetur
-          adipisicing elit.</p>
+        <p>A community of crafters connecting virtually.</p>
       </div>
       <!-- Grid column -->
 
@@ -268,7 +266,7 @@
           <a class="footer-link" href="#!">Your Account</a>
         </p>
         <p>
-          <a class="footer-link" href="#!">Lorem</a>
+          <a class="footer-link" href="add.php">Create Event</a>
         </p>
         <p>
           <a class="footer-link" href="#!">Help</a>
@@ -284,7 +282,7 @@
           <img class="footer-logo" src="assets/images/DIY.png" height="200" alt="DIY logo">
         </a>
       </div>
-       
+
       </div>
       <!-- Grid column -->
 
