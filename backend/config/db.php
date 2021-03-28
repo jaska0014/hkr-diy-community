@@ -1,11 +1,11 @@
 <?php
-    //$host = 'localhost'; // Use this for CodeAnywhere
-    $host = '127.0.0.1'; // Use this for docker
+    $host = 'localhost'; // Use this for CodeAnywhere
+    //$host = '127.0.0.1'; // Use this for docker
     $db   = 'diy_community';
     $user = 'root';
     $pass = 'Password1';
-    //$port = "3306"; // Use this for CodeAnywhere
-    $port = "3308"; // Use this for docker
+    $port = "3306"; // Use this for CodeAnywhere
+    //$port = "3308"; // Use this for docker
     $charset = 'utf8';
 
     $options = [
