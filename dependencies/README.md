@@ -11,6 +11,8 @@ mac
 ```bash
 brew install php@7.3
 ```
+Note:
+Depending on the operating system you will maybe need to ammened the **php.ini** file to set the extension_dir and uncomment the mySql php driver extension and then restart the php session
 
 
 ### (2) How to setup VSCOde
@@ -26,6 +28,11 @@ Stop after use
 ```stop
 docker-compose down
 ```
+Check docker images for myPhpAdmin and mysql first
+```
+docker ps
+```
+Or you can use the docker UI
 
 ### (4) Run the Code
 
