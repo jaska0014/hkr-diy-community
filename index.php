@@ -61,7 +61,7 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="images/header1.jpg" alt="First slide">
+      <img class="d-block w-100" src="assets/images/header1.jpg" alt="First slide">
       <div class="carousel-text mb-5">
     <h5 class="card-text-carousel">WELCOME TO YOUR NEW DIY COMMUNTIY!
          <p class="description">
