@@ -136,7 +136,7 @@
         } 
         else {
             echo "<div class='card card-event' style='width: 18rem;'>";
-            echo "<img src='images/bummer.png'class='card-img-top' alt='green'>";
+            echo "<img src='assets/images/bummer.png'class='card-img-top' alt='green'>";
             echo "<a href='add.php?id=' type='submit' class='btn btn-primary btn-sm mr-3;> <i class='fa fa-plus mr-1'></i>CREATE </a>";
             echo "<div class='card-body'>";
             echo "</div>";
@@ -172,7 +172,7 @@
         } 
         else {
             echo "<div class='card card-event' style='width: 18rem;'>";
-            echo "<img src='images/bummerrecent.png'class='card-img-top' alt='green'>";
+            echo "<img src='assets/images/bummerrecent.png'class='card-img-top' alt='green'>";
             echo "<div class='card-body'>";
             echo "</div>";
             echo "</div>";
