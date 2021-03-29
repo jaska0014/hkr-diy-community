@@ -1,3 +1,5 @@
+  <!-- DETTA ÄR ETT EXEMPEL PÅ HUR EN EVENT SIDA KAN SE UT -->
+
 <?php
   require_once 'backend/config/db.php';
   require_once 'backend/functions/select-food.php';
@@ -60,13 +62,10 @@
    </h1>
    </div>
    <br><br>
-      <br><br>
-  <img src="thisisme2.jpg" class="rounded-circle" alt="Cinque Terre" width="50" height="50"> 
-               <img src="thisisme2.jpg" class="thisisme" alt="thisisme" width="70" height="70">
-
-   
-</header>  
-     <br>
+      <br>
+               <img src="images/thisisme.jpg" class="thisisme" alt="thisisme" width="100" height="100">  
+    </header> 
+    <br>
        <ul class="breadcrumb">
   <li><a href="index.php">Home</a></li>
   <li><a href="events.php">Events</a></li>
@@ -93,13 +92,14 @@
         SALMON FOR 4
       </h4>
       <br>
+        <!-- DESSA ÄR BARA FOR SHOW VAR VI VILL ATT FRAMTIDA FUNKTIONER SKA LIGGA -->
       <button type="button" class="btn btn-sm btn-outline-dark">#FOOD #PESCETARIAN</button>
 <button type="button" class="btn btn-sm btn-outline-dark">STARTS IN: 3H55M</button>
 <button type="button" class="btn btn-sm btn-outline-dark">I WANNA JOIN!!!</button>
 <br>
       <p>
         <br>
-         Hi! my name is Jennifer and on thursday I´m going to teach you how to make a delicous salmon meal for 4 people. <br>
+         Hi! My name is Jennifer and on thursday I´m going to teach you how to make a delicous salmon meal for 4 people. <br>
         The perfect dish to make on your next dinner for friends or family. Below I will list the items you need to join <br>
         this event. If you have any questions before the event you can reach me at kontakt.jennifer@hotmail.com. <br>
         Hope to see you on thursday! Have a lovely week until then.
@@ -127,6 +127,7 @@ WHAT YOU WILL NEED: </h4>
 2 tablespoons dry white wine (substitute with 1/4 cup low-sodium chicken broth) <br>
       1 lemon sliced to garnish <br>
       </p>
+              <!-- DENNA ÄR BARA FOR SHOW VAR VI VILL ATT DENNA FRAMTIDA FUNKTION SKA LIGGA -->
       <button type="button" class="btn btn-sm btn-outline-dark">JOIN EVENT NOW!</button>
     </div>
 

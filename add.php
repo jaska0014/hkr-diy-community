@@ -56,7 +56,7 @@
          <a href="add.php" type="submit" class="btn btn-primary btn-sm mr-3"> <i class="fa fa-plus mr-1"></i>CREATE </a>
       </nav>
     </div>
-     <header class= "create-event">
+     <header class="create-event">
    <div class="boxed mt-3">
 <h1>
  CREATE AN EVENT
