@@ -285,7 +285,6 @@
 		</div>
 	</div>
     </div>
-    
       
 </body>
   
@@ -301,7 +300,7 @@
        <!-- Grid column -->
 
       <!-- Grid column -->
-      <div class="col-md-3 col-lg-3 col-xl-2 mx-auto mt-3">
+      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
         <h6 class="text-uppercase mb-4 font-weight-bold">DIY COMMUNITY</h6>
         <p>A community of crafters connecting virtually.</p>
       </div>
@@ -339,7 +338,18 @@
           <a class="footer-link" href="#!">Help</a>
         </p>
       </div>
+
+      <!-- Grid column -->
+      <hr class="w-100 clearfix d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+        <a href="index.php">
+          <img class="footer-logo" src="assets/images/DIY.png" height="200" alt="DIY logo">
+        </a>
+      </div>
+      </div>
     </div>
 </footer>
-<!-- Footer -->
+	
 </html>

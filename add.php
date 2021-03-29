@@ -108,6 +108,8 @@
 <?php
   require_once 'backend/includes/notifications.upload.php';
 ?>
+		
+  </body>
 
      <!-- Footer -->
 <footer class="page-footer font-small mdb-color pt-4">
@@ -168,15 +170,10 @@
           <img class="footer-logo" src="assets/images/DIY.png" height="200" alt="DIY logo">
         </a>
       </div>
-
       </div>
-      <!-- Grid column -->
-
     </div>
 </footer>
-<!-- Footer -->
-  </div>
-  </body>
+
   
   <!-- LOGIN MODAL -->
     

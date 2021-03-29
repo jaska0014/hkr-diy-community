@@ -264,7 +264,16 @@ font-family: 'Noto Serif', serif;
   .diy{
      background-image: url(https://images.unsplash.com/photo-1509009857102-03cf4c8a300b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80);
   }
+
+.salmonforfour{
+    background-image: url(https://images.unsplash.com/photo-1467003909585-2f8a72700288?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80);
+  }
   
+.thisisme{
+    background-image: url(https://images.unsplash.com/photo-1578774296842-c45e472b3028?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=642&q=80);
+   border-radius: 50%;
+}
+
   .boxed{
     background-color: rgba(255, 255, 255, 0.75);
     padding-bottom: 20px;
@@ -331,6 +340,7 @@ font-family: 'Noto Serif', serif;
   h4{
     font-size:30px; 
   }
+
   
  
   
@@ -407,3 +417,7 @@ font-family: 'Noto Serif', serif;
   .signup-section {
     padding: 0.3rem 0rem;
   }
+
+.thisisme {
+  border-radius: 50%;
+} 

@@ -8,7 +8,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Test form</title>
+    <title>Edit your event</title>
 
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/jquery-ui.min.css">
@@ -98,3 +98,66 @@
 <?php
   require_once 'backend/includes/notifications.upload.php'; 
 ?>
+	
+     <!-- Footer -->
+<footer class="page-footer font-small mdb-color pt-4">
+
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left">
+
+    <!-- Footer links -->
+    <div class="row text-center text-md-left mt-3 pb-3">
+       <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h6 class="text-uppercase mb-4 font-weight-bold">DIY COMMUNITY</h6>
+        <p>A community of crafters connecting virtually.</p>
+      </div>
+      <!-- Grid column -->
+
+      <hr class="w-100 clearfix d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+        <h6 class="text-uppercase mb-4 font-weight-bold">GET TO KNOW US</h6>
+        <p>
+          <a class="footer-link" href="#!">About</a>
+        </p>
+        <p>
+          <a class="footer-link" href="#!">Contact Us</a>
+        </p>
+        <p>
+          <a class="footer-link" href="#!">FAQ's</a>
+        </p>
+      </div>
+      <!-- Grid column -->
+
+      <hr class="w-100 clearfix d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+        <h6 class="text-uppercase mb-4 font-weight-bold">Useful Links</h6>
+        <p>
+          <a class="footer-link" href="#!">Your Account</a>
+        </p>
+        <p>
+          <a class="footer-link" href="add.php">Create Event</a>
+        </p>
+        <p>
+          <a class="footer-link" href="#!">Help</a>
+        </p>
+      </div>
+
+      <!-- Grid column -->
+      <hr class="w-100 clearfix d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+        <a href="index.php">
+          <img class="footer-logo" src="assets/images/DIY.png" height="200" alt="DIY logo">
+        </a>
+      </div>
+      </div>
+    </div>
+</footer>
