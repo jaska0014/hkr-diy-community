@@ -24,6 +24,12 @@
     
 			$(document).ready(function() {
 				
+				$('div.card.card-event').click(function(){
+					//Get the id from te html page for the 'data-id'
+					var id = $(this).attr('data-id')
+					//Redirect to the recipes page
+					window.location = "recipe.php?id="+id;
+				});
 				
 			});
       
@@ -75,7 +81,6 @@
     <button type="button1" disabled class="btn btn-light mr-3" type="submit "><i class="fas fa-hammer"></i> CRAFT </button>
       <button type="button1" disabled class="btn btn-light mr-3" type="submit "><i class="fas fa-mitten"></i> KNITTING </button>
     
-    
 <?php
   require_once 'backend/includes/notifications.index.php'; 
 ?>
@@ -92,10 +97,10 @@
         { 
           while ($row = $stmt->fetch()) 
 					{
-            echo "<div class='card card-event' style='min-width: 18rem ;width: 18rem; height: 18rem;'>";
+            echo "<div class='card card-event' data-id='".$row['id']."' style='min-width: 18rem ;width: 18rem; height: 18rem;'>";
             echo "<img src='".$row['image']."'class='card-img-top' alt='green'>";
-            echo "<a href='edit.php?id=".$row['id']."' class='update btn btn-sm btn-primary'>Update</a>";
-            echo "<a href='remove.php?id=".$row['id']."' class='delete btn btn-sm btn-danger'>Delete</a>";
+            echo "<a href='edit.php?id=".$row['id']."' class='update btn btn-sm btn-primary hide-button'>Update</a>";
+            echo "<a href='remove.php?id=".$row['id']."' class='delete btn btn-sm btn-danger hide-button'>Delete</a>";
             echo "<div class='card-body'>";
             echo "<p class='card-text'>".strtoupper($row['title'])."</p>";
             echo "<p class='card-under'>Starts on ".date_format(date_create($row['date']),"Y/m/d")."</p>";
@@ -114,8 +119,7 @@
       ?>
   <br>
   </div>
-
-</div>
+  </div>
     
      <!-- UNDER CONSTRUCTION MODAL -->
        <div id="popup1" class="overlay">

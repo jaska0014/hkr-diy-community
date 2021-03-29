@@ -24,6 +24,12 @@
     
 			$(document).ready(function() {
 				
+				$('div.card.card-event').click(function(){
+					//Get the id from te html page for the 'data-id'
+					var id = $(this).attr('data-id')
+					//Redirect to the recipes page
+					window.location = "recipe.php?id="+id;
+				});
 				
 			});
       
@@ -92,7 +98,7 @@
         if ($stmt_upcoming->rowCount() > 0) 
         {
           while ($row = $stmt_upcoming->fetch()) {
-            echo "<div class='card card-event' style='min-width: 18rem ;width: 18rem; height: 18rem;'>";
+            echo "<div class='card card-event' data-id='".$row['id']."' style='min-width: 18rem ;width: 18rem; height: 18rem;'>";
             echo "<img src='".$row['image']."'class='card-img-top' alt='green'>";
             echo "<a href='edit.php?id=".$row['id']."' class='update btn btn-sm btn-primary'>Update</a>";
             echo "<a href='remove.php?id=".$row['id']."' class='delete btn btn-sm btn-danger'>Delete</a>";
@@ -128,7 +134,7 @@
         if ($stmt_past->rowCount() > 0) 
         {
           while ($row = $stmt_past->fetch()) {
-            echo "<div class='card card-event' style='min-width: 18rem ;width: 18rem; height: 18rem;'>";
+            echo "<div class='card card-event' data-id='".$row['id']."' style='min-width: 18rem ;width: 18rem; height: 18rem;'>";
             echo "<img src='".$row['image']."'class='card-img-top' alt='green'>";
             echo "<a href='edit.php?id=".$row['id']."' class='update btn btn-sm btn-primary'>Update</a>";
             echo "<a href='remove.php?id=".$row['id']."' class='delete btn btn-sm btn-danger'>Delete</a>";

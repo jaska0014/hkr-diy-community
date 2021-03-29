@@ -55,80 +55,46 @@
       </nav>		
     </div>	   
     
- <header class= "salmonforfour">
+ <header>
    <div class="boxed mt-5">
 <h1>
- SALMON FOR 4
+EVENT TITLE
    </h1>
    </div>
    <br><br>
       <br>
-               <img src="images/thisisme.jpg" class="thisisme" alt="thisisme" width="100" height="100">  
+               <img src="images/nopic.jpg" class="thisisme" alt="profilepicture" width="100" height="100">  
     </header> 
     <br>
        <ul class="breadcrumb">
   <li><a href="index.php">Home</a></li>
   <li><a href="events.php">Events</a></li>
         <li><a href="food.php">Food</a></li>
-  <li>Salmon for 4</li>
+  <li>Event title</li>
 </ul>
     
 <?php
   require_once 'backend/includes/notifications.index.php'; 
 ?>
 
-
-
-
-  <div class="my-card-scrollable">
-   
-</div>
     
-       <div class="container"> 
-
-    <div class=""style="width:100%;height:300px;background-color:#f9f9f9;margin-bottom:20px;" >
-      <h4>
-        <br>
-        SALMON FOR 4
-      </h4>
-      <br>
-        <!-- DESSA ÄR BARA FOR SHOW VAR VI VILL ATT FRAMTIDA FUNKTIONER SKA LIGGA -->
-      <button type="button" class="btn btn-sm btn-outline-dark">#FOOD #PESCETARIAN</button>
-<button type="button" class="btn btn-sm btn-outline-dark">STARTS IN: 3H55M</button>
-<button type="button" class="btn btn-sm btn-outline-dark">I WANNA JOIN!!!</button>
-<br>
-      <p>
-        <br>
-         Hi! My name is Jennifer and on thursday I´m going to teach you how to make a delicous salmon meal for 4 people. <br>
-        The perfect dish to make on your next dinner for friends or family. Below I will list the items you need to join <br>
-        this event. If you have any questions before the event you can reach me at kontakt.jennifer@hotmail.com. <br>
-        Hope to see you on thursday! Have a lovely week until then.
-      </p>
-      </div>
-
-    </div>
-       <div class="container"> 
-
-    <div class=""style="width:100%;height:450px;background-color:#f9f9f9;margin-bottom:20px;" >
+       <div class="container-fluid"> 
+  
+    
        <h4>
+         DESCRIPTION
+    </h4>
+    <p>
+      This is where the event description will be.
+    </p>
          <br>
-WHAT YOU WILL NEED: </h4>
+<h4> WHAT YOU WILL NEED: </h4>
 <p>
-   1 pound (500 g) fingerling potatoes halved (or Yukon golds or halved white/red baby potatoes) <br>
-2 tablespoons olive oil <br>
-1 1/2 teaspoons salt, divided<br>
-1/2 teaspoon cracked black pepper, divided <br>
-4 (6 oz | 170 g) skinless salmon fillets <br>
-2 1/2 tablespoons minced garlic, divided <br>
-2 tablespoons fresh chopped parsley <br>
-1/3 cup freshly squeezed lemon juice <br>
-1/2 cup melted unsalted butter <br>
-3 bunches asparagus, (18 spears, woody ends removed) <br>
-2 tablespoons dry white wine (substitute with 1/4 cup low-sodium chicken broth) <br>
-      1 lemon sliced to garnish <br>
+  Here you will list the items that the participants will need to follow along in your event. 
+  
       </p>
               <!-- DENNA ÄR BARA FOR SHOW VAR VI VILL ATT DENNA FRAMTIDA FUNKTION SKA LIGGA -->
-      <button type="button" class="btn btn-sm btn-outline-dark">JOIN EVENT NOW!</button>
+      <button type="button" class="btn btn-light mr-3">JOIN EVENT</button>
     </div>
 
     </div>
