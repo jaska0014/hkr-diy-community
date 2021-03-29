@@ -195,6 +195,11 @@ body {
       color: #36180B;
   }
  
+.to-events{
+  color: #36180B;
+   text-decoration: none;
+}
+
 /* ------------------------------CAROUSEL----------------------------------------*/
 .carousel-item {
   height: 531px;

@@ -61,11 +61,11 @@
     <select name="category" class="form-control" id="category" required
     value="<?php echo $row['category']; ?>"
     >
-			<option value="food"<?php if ($row['category'] == 'food') echo ' selected="selected"'; ?>>food</option>
-      <option value="craft"<?php if ($row['category'] == 'craft') echo ' selected="selected"'; ?>>craft</option>
-      <option value="beauty"<?php if ($row['category'] == 'beauty') echo ' selected="selected"'; ?>>beauty</option>
-      <option value="knitting"<?php if ($row['category'] == 'knitting') echo ' selected="selected"'; ?>>knitting</option>
-      <option value="art"<?php if ($row['category'] == 'art') echo ' selected="selected"'; ?>>art</option>
+			<option value="food"<?php if ($row['category'] == 'food') echo ' selected="selected"'; ?>>Food</option>
+      <option value="craft"<?php if ($row['category'] == 'craft') echo ' selected="selected"'; ?>>Craft</option>
+      <option value="beauty"<?php if ($row['category'] == 'beauty') echo ' selected="selected"'; ?>>Beauty</option>
+      <option value="knitting"<?php if ($row['category'] == 'knitting') echo ' selected="selected"'; ?>>Knitting</option>
+      <option value="art"<?php if ($row['category'] == 'artS') echo ' selected="selected"'; ?>>Art</option>
     </select>
   </div>
 	
